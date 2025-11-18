@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {Routes, Route, Link} from 'react-router-dom'
 import Landing from './pages/Landing.jsx'
 import PokemonPages from './pages/PokemonPages.jsx'
+import PokemonInfo from './pages/PokemonInfo.jsx'
 const App = () => {
 
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/pokemon/page/:pagenum" element={<PokemonPages />} />
+          <Route path="/pokemon/:id" element={<PokemonInfo />} />
         </Routes>
       </div>
     </>
