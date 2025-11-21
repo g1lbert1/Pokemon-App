@@ -22,7 +22,7 @@ const PokemonPages = () => {
       {data.getPokemons.pokemons.map((pokemon) => (
         <div key={pokemon.name}>
           <Link to={`/pokemon/${pokemon.id}`}>
-            <img src={pokemon.image || "/fallback.png"} alt={pokemon.name} />
+            <img src={pokemon.image || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"} alt={pokemon.name} />
           </Link>
           <h3>{pokemon.name}</h3>
           <p>Types: {pokemon.types.join(", ")}</p>

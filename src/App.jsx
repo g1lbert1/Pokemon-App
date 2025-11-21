@@ -3,6 +3,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 import Landing from './pages/Landing.jsx'
 import PokemonPages from './pages/PokemonPages.jsx'
 import PokemonInfo from './pages/PokemonInfo.jsx'
+import Trainers from './pages/Trainers.jsx'
 const App = () => {
 
   return (
@@ -13,12 +14,14 @@ const App = () => {
           <nav style={{ display: "flex", gap: "1rem" }}>
             <Link to="/" className="text-lg font-semibold text-green-600 hover:text-green-300 transition-colors duration-200">Home</Link>
             <Link to="/pokemon/page/0" className="text-lg font-semibold text-green-600 hover:text-green-300 transition-colors duration-200">Pokemon</Link>
+            <Link to="/trainers" className="text-lg font-semibold text-green-600 hover:text-green-300 transition-colors duration-200">Trainers</Link>
           </nav>
         </header>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/pokemon/page/:pagenum" element={<PokemonPages />} />
           <Route path="/pokemon/:id" element={<PokemonInfo />} />
+          <Route path="/trainers" element={<Trainers />} />
         </Routes>
       </div>
     </>
